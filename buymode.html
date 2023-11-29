@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="dk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/buymode.css">
+    <link rel="icon" href="img/logo.png">
+    <script src="js/claudia.js"></script>
+    <script type="module" src="/src/main.js" defer></script>
+    <title>Buy Mode</title>
+    <script src="https://kit.fontawesome.com/d695244064.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="preconnect">
+  </head>
+  <body>
+ 
+    <header>
+      <div id="app"></div>
+      </header>
+
+    <button onclick="addToCart('Product A', 50)">Add Product A to Cart</button>
+    <button onclick="addToCart('Product B', 30)">Add Product B to Cart</button>
+    <button onclick="openCartOverlay()">Open Cart</button>
+
+ 
+    <div id="overlay">
+      <div id="cartOverlay"></div>
+      <button id="close-btn">Luk✖</button>
+</div>
+
+<section>
+  <div class="textoverbillede">
+    <h3>LauRe</h3>
+    <i class="fa-regular fa-star"></i>
+      <h2>LR winter jacket</h2>
+        <p>Reference: E2972WOMRS_D301</p>
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <div class="pris">
+    <span class="red">679kr</span>
+    <p>799kr</p>
+    <span class="red">28%</span>
+  </div>
+
+
+  <div class="imgstor">
+    <img src="img/jakke1.jpg" alt="LR winter jacket">
+  </div>
+
+
+  <div class="imglille">
+    <img src="img/jakke2.jpg" alt="LR winter jacket">
+    <img src="img/jakke4.jpg" alt="LR winter jacket">
+    <img src="img/jakke3.jpg" alt="LR winter jacket">
+  </div>
+</section>
+
+
+<section>
+  <div class="valgfarve">
+    <h3>Farve:</h3>
+  </div>
+
+
+  <div class="str">
+    <h3>Størrelse:</h3>
+    <p>S</p>
+    <p>M</p>
+    <p>L</p>
+    <p>XL</p>
+  </div>
+
+
+  <div class="putit">
+    <button>press</button>
+  </div>
+</section>
+
+
+<section>
+  <div class="infor">
+    <i class="fa-solid fa-truck-fast"></i>
+    <p>Forsendelse & Returnering</p>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <div class="infor1">
+    <p>Materiale & vaskeanvisning</p>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <div class="infor2">
+    <p>Information om produkt</p>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <div class="infor3">
+    <p>Pasform</p>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <div class="infor4">
+    <i class="fa-solid fa-share-from-square"></i>
+    <p>Del</p>
+  </div>
+</section>
+
+
+<section>
+  <div class="lig">
+    <h2>Lignende produkter</h2>
+  </div>
+
+
+  <div class="imglig">
+    <img src="img/trak1.jpg" alt="Product 1">
+    <h3>LR winter jacket</h3>
+    <p>1.200.00 DKK</p>
+  </div>
+
+
+  <div class="imglig2">
+    <img src="img/trak1.jpg" alt="Product 1">
+    <h3>LR winter jacket</h3>
+    <p>1.200.00 DKK</p>
+  </div>
+
+
+  <div class="imglig3">
+    <img src="img/trak1.jpg" alt="Product 1">
+    <h3>LR winter jacket</h3>
+    <p>1.200.00 DKK</p>
+  </div>
+</section>
+
+
+  <footer>
+    <h2 class="footer-heading">LaRue Fashion</h2>
+    <div class="columns">
+    <div class="column">
+        <h3>LARUE FASHION</h3>
+        <ul class="submenu">
+            <li class="submenu-item">MODE</li>
+            <li class="submenu-item">FIND OS HER</li>
+            <li class="submenu-item">FØLG DIN ORDRE</li>
+        </ul>
+    </div>
+
+
+    <div class="column">
+        <h3>INFORMATION</h3>
+        <ul class="submenu">
+            <li class="submenu-item">FRAGT OG LEVERING</li>
+            <li class="submenu-item">HANDELSBETINGELSER</li>
+            <li class="submenu-item">HJÆLP & FAQ</li>
+            <li class="submenu-item">AFMELD</li>
+        </ul>
+    </div>
+
+
+    <div class="column">
+      <a href="omos.html">
+        <h3>OM OS</h3>
+      </a>
+        <ul class="submenu">
+            <li class="submenu-item">KONTAKT OS</li>
+            <li class="submenu-item">OM OS</li>
+            <li class="submenu-item">TERMS OF SERVICE</li>
+            <li class="submenu-item">REFUND POLICY</li>
+        </ul>
+    </div>
+  </div>
+
+
+    <div class="divider"></div>
+
+
+    <div class="footer-list">
+      <ul>
+        <li>COOKIE PREFERENCES</li>
+        <li>SITEMAP</li>
+        <li>PERSONDATA</li>
+        <li>POLITIKVILKÅR</li>
+        <li>FOR BRUG</li>
+      </ul>
+       <div class="icons">
+      <ul>
+        <li>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </li>
+    </ul>
+      </div>
+    </div>
+    <div class="footer-images">
+      <img src="img/pay.png" alt="alt du kan betale med på Larue Fashion">
+    </div>
+    <div class="footer-text">
+      <p>©2023 LARUE DREVET AF SHOPIFY</p>
+    </div>
+</footer>
+</body>
+</html>

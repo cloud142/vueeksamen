@@ -1,0 +1,39 @@
+img {
+    width: 5%;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    transition: right 0.5s;
+}
+
+#cartOverlay {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.slide-in {
+    right: 0 !important;
+}
+
+
+#close-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
