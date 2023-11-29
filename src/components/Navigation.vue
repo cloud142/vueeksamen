@@ -33,9 +33,11 @@
         </div>
         <transition name="moblie-nav">
          <ul v-show="moblieNav" class="dropdown-nav">
-            <li><a class="link" href="buymode.html">Fashion</a></li>
+            <li><a class="link" href="wintercollection.html">Fashion</a></li>
             <li><a class="link" href="index.html">Home</a></li>
+            <span class="red">
             <li><a class="link" href="buymode.html">Udsalg</a></li>
+            </span>
          </ul>
         </transition>
     </nav>
