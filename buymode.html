@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/buymode.css">
     <link rel="icon" href="img/logo.png">
     <script src="js/claudia.js"></script>
+    <script src="js/claudiacirkel.js" defer></script>
     <script type="module" src="/src/main.js" defer></script>
     <title>Buy Mode</title>
     <script src="https://kit.fontawesome.com/d695244064.js" crossorigin="anonymous"></script>
@@ -18,32 +19,27 @@
       <div id="app"></div>
       </header>
 
-    <button onclick="addToCart('Product A', 50)">Add Product A to Cart</button>
-    <button onclick="addToCart('Product B', 30)">Add Product B to Cart</button>
-    <button onclick="openCartOverlay()">Open Cart</button>
-
- 
-    <div id="overlay">
-      <div id="cartOverlay"></div>
-      <button id="close-btn">Luk✖</button>
-</div>
 
 <section>
   <div class="textoverbillede">
+    <div class="star">
     <h3>LauRe</h3>
     <i class="fa-regular fa-star"></i>
+    </div>
       <h2>LR winter jacket</h2>
         <p>Reference: E2972WOMRS_D301</p>
   </div>
 
 
-  <div class="divider"></div>
+  <div class="deler"></div>
 
 
   <div class="pris">
-    <span class="red">679kr</span>
-    <p>799kr</p>
-    <span class="red">28%</span>
+    <span class="redd">679.00kr</span>
+    <div class="spare">
+      <p>799.00kr</p>
+      <span class="redd">25%</span>
+    </div>
   </div>
 
 
@@ -63,20 +59,31 @@
 <section>
   <div class="valgfarve">
     <h3>Farve:</h3>
+    <div class="rammefarve">
+      <div class="circle red"></div>
+      <div class="circle blue"></div>
+      <div class="circle green"></div>
+      <div class="circle yellow"></div>
+    </div>
   </div>
 
 
   <div class="str">
     <h3>Størrelse:</h3>
-    <p>S</p>
-    <p>M</p>
-    <p>L</p>
-    <p>XL</p>
+    <p class="rund">S</p>
+    <p class="rund">M</p>
+    <p class="rund">L</p>
+    <p class="rund">XL</p>
   </div>
 
 
   <div class="putit">
-    <button>press</button>
+    <button onclick="addToCart('Product A', 50)">LÆG I INDKØBSKURV</button>
+  </div>
+
+  <div id="overlay">
+    <div id="cartOverlay"></div>
+    <button id="close-btn">Luk✖</button>
   </div>
 </section>
 
@@ -84,12 +91,12 @@
 <section>
   <div class="infor">
     <i class="fa-solid fa-truck-fast"></i>
-    <p>Forsendelse & Returnering</p>
+    <p class="mp">Forsendelse & Returnering</p>
     <i class="fa-solid fa-chevron-down"></i>
   </div>
 
 
-  <div class="divider"></div>
+  <div class="deler2"></div>
 
 
   <div class="infor1">
@@ -98,7 +105,7 @@
   </div>
 
 
-  <div class="divider"></div>
+  <div class="deler2"></div>
 
 
   <div class="infor2">
@@ -107,7 +114,7 @@
   </div>
 
 
-  <div class="divider"></div>
+  <div class="deler2"></div>
 
 
   <div class="infor3">
@@ -116,7 +123,7 @@
   </div>
 
 
-  <div class="divider"></div>
+  <div class="deler2"></div>
 
 
   <div class="infor4">
@@ -140,18 +147,21 @@
 
 
   <div class="imglig2">
-    <img src="img/trak1.jpg" alt="Product 1">
+    <img src="img/trak1.jpg" alt="Product 2">
     <h3>LR winter jacket</h3>
     <p>1.200.00 DKK</p>
   </div>
 
 
   <div class="imglig3">
-    <img src="img/trak1.jpg" alt="Product 1">
+    <img src="img/trak1.jpg" alt="Product 3">
     <h3>LR winter jacket</h3>
     <p>1.200.00 DKK</p>
   </div>
 </section>
+<button onclick="addToCart('Product A', 50)">Add Product A to Cart</button>
+<button onclick="addToCart('Product B', 30)">Add Product B to Cart</button>
+<button onclick="openCartOverlay()">Open Cart</button>
 
 
   <footer>

@@ -1,6 +1,4 @@
-img {
-    width: 5%;
-}
+
 
 #overlay {
     display: none;
@@ -36,4 +34,168 @@ img {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  .textoverbillede {
+    margin: 50px 40px 0px;
+  }
+
+  .star {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 10px;
+  }
+
+  .star i {
+    font-size: 20px;
+  }
+
+  .pris {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0px 40px 0px;
+  }
+
+  .pris span {
+    font-size: 20px;
+  }
+
+  .spare p {
+    text-decoration: line-through;
+    text-decoration-color: #161618;
+    text-decoration-style: solid;
+    font-size: 15px;
+  }
+
+  .redd {
+    color: #EF4545;
+  }
+  .spare span {
+    border-bottom: 2px solid #EF4545; 
+    padding-bottom: 0px;
+  }
+
+  .deler {
+    border: 1px solid #ccc; 
+    margin: 15px 15px; 
+    width: 95%;
+  }
+
+  .imgstor {
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+  }
+
+  .imgstor img {
+    width: 60%;
+    border-radius: 5px;
+  }
+
+  .imglille {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  .imglille img {
+    width: 30%;
+  }
+
+  .valgfarve {
+    margin: 50px 40px 20px;
+  }
+
+  .valgfarve h3 {
+    font-size: 25px;
+  }
+
+  .rammefarve {
+    display: flex;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+
+.circle.active {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+    .str {
+        margin: 20px 40px 20px; 
+    }
+
+    .str h3 {
+        font-size: 25px;
+    }
+
+    .rund {
+        border: 2px solid #333;
+        border-radius: 40%;
+        padding: 10px;
+        text-align: center;
+        width: 40px; /* Just an example width */
+        position: relative;
+        z-index: 1; /* Ensure the text is above the border */
+        margin-top: 10px;
+    }
+
+    .putit {
+        display: grid;
+        place-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .putit button{
+        font-size: 20px;
+        direction: none;
+        padding: 30px 30px 30px;
+        background-color: #3C412A;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .putit button:hover {
+        background-color: #2980b9;
+    }
+
+    .infor, .infor2, .infor3, .infor1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .deler2 {
+        border: 1px solid #ccc; 
+        margin: 15px 55px; 
+        width: 70%;
+    }
+
+    .infor4 {
+        margin: 20px 70px 20px; 
+    }
+
+
+ 
+
+
+img {
+    width: 5px;
   }
