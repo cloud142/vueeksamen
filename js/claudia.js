@@ -30,16 +30,16 @@ function slideInCartOverlay() {
 
 function updateCartOverlay() {
     const cartOverlay = document.getElementById('cartOverlay');
-    cartOverlay.innerHTML = '<h2>Shopping Cart</h2>';
+    cartOverlay.innerHTML = '<h2>KURV</h2>';
     
     if (shoppingCart.length === 0) {
         cartOverlay.innerHTML += '<p>Your cart is empty.</p>';
     } else {
         for (let i = 0; i < shoppingCart.length; i++) {
             const { product, price } = shoppingCart[i];
-            cartOverlay.innerHTML += `<p>${product} - DKK ${price} <button onclick="removeFromCart(${i})">Remove</button></p>`;
+            cartOverlay.innerHTML += `<p>${product} - ${price} DKK <button onclick="removeFromCart(${i})">Remove</button></p>`;
         }
-        cartOverlay.innerHTML += `<p>Total: DKK ${totalCost}</p>`;
+        cartOverlay.innerHTML += `<p>Total: ${totalCost} DKK </p>`;
     }
 }
 
@@ -55,21 +55,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let overlay = document.getElementById('overlay');
     let closeBtn = document.getElementById('close-btn');
 
-    // Function to show the overlay
     function showOverlay() {
-        overlay.style.display = 'flex'; // Assuming you want a flex container
+        overlay.style.display = 'flex';
     }
 
-    // Function to hide the overlay
+
     function hideOverlay() {
         overlay.style.display = 'none';
     }
 
-    // Add click event listener to the close button
+
     closeBtn.addEventListener('click', function () {
         hideOverlay();
     });
 
-    // You can trigger the overlay to show by calling showOverlay() function
-    // For example: showOverlay();
 });
+
+
