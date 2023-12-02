@@ -310,6 +310,19 @@
       margin-left: 30px;
     }
 
+    .allemini {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .imglig,
+  .imglig2,
+  .imglig3 {
+    flex: 1;
+    text-align: center;
+    margin: -90px;
+  }
+
     .imglille {
       padding: 0 0px;
     }
@@ -352,12 +365,12 @@
 }
 
 .imglig, .imglig2, .imglig3 {
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 60px;
 }
 
 .imglig img, .imglig2 img, .imglig3 img {
-    width: 30%;
+    width: 50%;
 }  
       }
       
@@ -377,39 +390,32 @@
      }
 
     .imgstor img {
-      width: 20%;
+      width: 35%;
     }
+ 
+
+  
 
     .imglille img {
-      width: 8%;
+      width: 10%;
     }
 
     .valgfarve h3 {
-      font-size: 20px;
+      font-size: 25px;
     }
   
     .circle {
-      width: 40px;
-      height: 40px;
+      width: 55px;
+      height: 55px;
   }
   .str h3 {
-    font-size: 20px;
+    font-size: 25px;
+    margin-top: 30px;
 }
-
-.putit button{
-    font-size: 20px;
-    padding: 30px 100px;
-}
-
 
 .deler2 {
-    margin: 15px 25px; 
-    width: 90%; 
-}
-
-.infor, .infor2, .infor3, .infor1, .infor4 {
-  justify-content: left;
-  margin: 20px 70px 20px;
+    margin: 15px 55px; 
+    width: 95%; 
 }
 
 
@@ -417,14 +423,12 @@
     font-size: 40px;
 }
 
-.imglig, .imglig2, .imglig3 {
-    margin-top: 20px;
-    margin-bottom: 60px;
-}
 
 .imglig img, .imglig2 img, .imglig3 img {
-    width: 30%;
+    width: 60%;
 }
+
+
         
       }
 
