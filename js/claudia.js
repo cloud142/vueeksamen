@@ -33,13 +33,13 @@ function updateCartOverlay() {
     cartOverlay.innerHTML = '<h2>KURV</h2>';
     
     if (shoppingCart.length === 0) {
-        cartOverlay.innerHTML += '<p>Your cart is empty.</p>';
+        cartOverlay.innerHTML += '<p>DIN KURV ER TOM.</p>';
     } else {
         for (let i = 0; i < shoppingCart.length; i++) {
             const { product, price } = shoppingCart[i];
-            cartOverlay.innerHTML += `<p>${product} - ${price} DKK <button onclick="removeFromCart(${i})">Remove</button></p>`;
+            cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK <button onclick="removeFromCart(${i})">SLET</button></p>`;
         }
-        cartOverlay.innerHTML += `<p>Total: ${totalCost} DKK </p>`;
+        cartOverlay.innerHTML += `<p>TOTAL: ${totalCost}.00 DKK </p>`;
     }
 }
 

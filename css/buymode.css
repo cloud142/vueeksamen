@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 40%;
+    width: 70%;
     height: 100vh;
     background-color: white;
     z-index: 2;
@@ -38,15 +38,40 @@
     margin: 0;
 }
 
+ #cartOverlay button  {
+  border: none;
+  padding: 5px 15px ;
+  background-color: #3C412A;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#cartOverlay button:hover {
+    background-color: #161618;
+}
+
+
 #close-btn {
-    background-color: #337ab7;
+    background-color: #3C412A;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 90px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
+
+#close-btn:hover {
+  background-color: #161618;
+}
+
+
 
 .textoverbillede p, .pris p, .str p, .infor p, .infor2 p, .infor3 p, .infor1 p, .imglig p, .imglig2 p, .imglig3 p {
   display: inline-block;
@@ -104,19 +129,26 @@
   }
 
   .imgstor {
-    display: grid;
-    place-items: center;
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 15px;
   }
 
   .imgstor img {
     width: 60%;
     border-radius: 5px;
+    cursor: zoom-in;
+    margin-right: 10px;
+  }
+
+  .imgstor i {
+    display: none;
   }
 
   .imglille {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-evenly; 
     align-items: center;
     padding: 0 20px;
     margin-top: 30px;
@@ -124,6 +156,8 @@
 
   .imglille img {
     width: 30%;
+    cursor: zoom-in;
+    border-radius: 5px;
   }
 
   .valgfarve {
@@ -154,7 +188,7 @@
 .yellow { background-color: #ccc; }
 
 .circle.active {
-    transform: scale(1.2);
+    transform: scale(1.4);
     opacity: 0.8;
 }
 
@@ -172,9 +206,9 @@
         border-radius: 40%;
         padding: 10px;
         text-align: center;
-        width: 40px; /* Just an example width */
+        width: 40px; 
         position: relative;
-        z-index: 1; /* Ensure the text is above the border */
+        z-index: 1; 
         margin-top: 10px;
     }
 
@@ -194,13 +228,14 @@
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        border-radius: 5px;
     }
 
     .putit button:hover {
         background-color: #161618;
     }
 
-    .infor, .infor2, .infor3, .infor1 {
+    .infor, .infor2, .infor3, .infor1, .infor4 {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -210,14 +245,7 @@
     .deler2 {
         border: 1px solid #ccc; 
         margin: 15px 55px; 
-        width: 70%;
     }
-
-    .infor4 {
-        margin: 20px 70px 20px;
-        text-transform: uppercase; 
-    }
-
 
     .lig {
         display: grid;
@@ -235,20 +263,168 @@
         place-items: center;
         margin-top: 30px;
         margin-bottom: 40px;
+        text-transform: uppercase;
     }
 
     .imglig img, .imglig2 img, .imglig3 img {
         width: 50%;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
 
     @media (min-width: 768px) {
-   
-      
+      #overlay {
+         top: 0;
+         width: 50%;
+    }
+
+     #cartOverlay button  {
+      padding: 8px 30px ;
+     }
+    
+    #close-btn {
+        padding: 10px 150px;
+        margin-left: 15px;
+    }
+
+    .textoverbillede h3 {
+      font-size: 40px;
+    }
+
+    .textoverbillede h2 {
+      font-size: 30px;
+    }
+
+    .star i {
+      font-size: 30px;
+    }
+
+    .imgstor img {
+      width: 40%;
+    }
+
+    .imgstor i {
+      display: inline;
+      font-size: 50px;
+      margin-left: 30px;
+    }
+
+    .imglille {
+      padding: 0 0px;
+    }
+
+    .imglille img {
+      width: 20%;
+    }
+
+    .valgfarve h3 {
+      font-size: 20px;
+    }
+  
+    .circle {
+      width: 40px;
+      height: 40px;
+  }
+  .str h3 {
+    font-size: 20px;
+}
+
+.putit button{
+    font-size: 20px;
+    padding: 30px 100px;
+}
+
+
+.deler2 {
+    margin: 15px 25px; 
+    width: 90%; 
+}
+
+.infor, .infor2, .infor3, .infor1, .infor4 {
+  justify-content: left;
+  margin: 20px 70px 20px;
+}
+
+
+.lig h2 {
+    font-size: 40px;
+}
+
+.imglig, .imglig2, .imglig3 {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.imglig img, .imglig2 img, .imglig3 img {
+    width: 30%;
+}  
       }
       
       @media (min-width: 1024px) {
-       
+        #overlay {
+          top: 0;
+          width: 35%;
+     }
+ 
+      #cartOverlay button  {
+       padding: 8px 30px ;
+      }
+     
+     #close-btn {
+         padding: 10px 150px;
+         margin-left: 5px;
+     }
+
+    .imgstor img {
+      width: 20%;
+    }
+
+    .imglille img {
+      width: 8%;
+    }
+
+    .valgfarve h3 {
+      font-size: 20px;
+    }
+  
+    .circle {
+      width: 40px;
+      height: 40px;
+  }
+  .str h3 {
+    font-size: 20px;
+}
+
+.putit button{
+    font-size: 20px;
+    padding: 30px 100px;
+}
+
+
+.deler2 {
+    margin: 15px 25px; 
+    width: 90%; 
+}
+
+.infor, .infor2, .infor3, .infor1, .infor4 {
+  justify-content: left;
+  margin: 20px 70px 20px;
+}
+
+
+.lig h2 {
+    font-size: 40px;
+}
+
+.imglig, .imglig2, .imglig3 {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.imglig img, .imglig2 img, .imglig3 img {
+    width: 30%;
+}
         
       }
 
