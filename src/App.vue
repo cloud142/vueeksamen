@@ -6,14 +6,17 @@
   </template>
   
   <script>
+import Salma from './components/Salma.vue';
 import Navigation from './components/Navigation.vue';
   export default {
   components: { Navigation },
 	name: "App",
 	components: {
-		Navigation,
+		Navigation,  
 	}
+  
   };
+
   </script>
   
   <style lang="scss">
