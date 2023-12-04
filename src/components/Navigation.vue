@@ -24,7 +24,7 @@
         </ul>
         <ul v-show="!mobile" class="navigationicons">
             <li><i class="fa-solid fa-magnifying-glass"><a href="#"></a></i></li>
-            <li><i class="fa-regular fa-user"><a href="#"></a></i></li>
+            <li><i class="fa-regular fa-user"><a href="login.html"></a></i></li>
             <li><i class="fa-regular fa-star"><a href="#"></a></i></li>
             <li><i class="fa-solid fa-cart-shopping"><a href="#"></a></i></li>
         </ul>
