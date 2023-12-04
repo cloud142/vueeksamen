@@ -48,7 +48,7 @@
         if (this.loginUsername === 'bruger123' && this.loginPassword === 'kode123') {
           console.log('Login successful');
           // Yderligere handling, f.eks. navigering til en anden side
-          this.navigateToAnotherPage('forside.html');
+          this.navigateToAnotherPage();
         } else {
           this.loginError = 'Forkert brugernavn eller kodeord';
         }
