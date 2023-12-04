@@ -1,6 +1,7 @@
 <template>
 	
 		<Navigation/>
+    <Salma/>
 	  <router-view />
 
   </template>
@@ -9,10 +10,10 @@
 import Salma from './components/Salma.vue';
 import Navigation from './components/Navigation.vue';
   export default {
-  components: { Navigation },
+  components: { Navigation, Salma },
 	name: "App",
 	components: {
-		Navigation,  
+		Navigation, Salma,  
 	}
   
   };

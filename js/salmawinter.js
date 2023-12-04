@@ -37,7 +37,7 @@ function updateProducts() {
     // Implementer logikken til at nulstille filtre
     // Opdater resultCount med det samlede antal resultater
     const resultCount = document.getElementById("resultCount");
-    resultCount.innerText = "0 result(s)";
+    resultCount.innerText = " result(s)";
   }
   
   // Opdater produkter ved indlæsning af siden
