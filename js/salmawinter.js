@@ -1,11 +1,3 @@
-const products = [
-  { name: "WHITE LRACTIVE", price: 679, image: "./img/trak1.jpg" },
-  { name: "LR WINTER JACKET 2", price: 1.800, image: "./img/jakke1.jpg" },
-  { name: "LR WINTER JACKET 2", price: 1.800 , image: "./img/jakke2.jpg" },
-  { name: "LR WINTER JACKET 2", price: 1.800, image: "./img/jakke3.jpg" },
-  { name: "WHITE LRACTIVE", price: 679 , image: "./img/trak2.jpg" },
-  { name: "LR WINTER JACKET 2", price: 1.800, image: "./img/jakke4.jpg" }
-];
 
 function updateProducts() {
   const productContainer = document.getElementById("productContainer");
@@ -32,6 +24,7 @@ function updateProducts() {
     productContainer.appendChild(productElement);
   });
 }
+
   
   function applyFilters() {
     // Implementer logikken til filtrering baseret på valgte filtre
