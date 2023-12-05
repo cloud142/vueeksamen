@@ -1,17 +1,17 @@
 <template>
 	
-		<Navigation/>
+		<Claudia/>
 	  <router-view />
 
   </template>
   
   <script>
-import Navigation from './components/Navigation.vue';
+import Claudia from './components/Claudia.vue';
   export default {
-  components: { Navigation },
+  components: { Claudia },
 	name: "App",
 	components: {
-		Navigation,  
+		Claudia,  
 	}
   
   };
