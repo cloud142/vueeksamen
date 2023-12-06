@@ -1,13 +1,24 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import Salma from './views/Salma.vue'; // Importer jeres Salma.vue komponent
+import { createRouter, createWebHashHistory } from 'vue-router';
+
+// Import your components
+import Claudia from './views/Claudia.vue';
+import Salma from './views/Salma.vue';
 
 const routes = [
-  { path: '/', component: Salma },
-  // Tilføj eventuelle andre ruter efter behov
+  {
+    path: '/',
+    name: 'home',
+    component: Claudia,
+  },
+  {
+    path: '/signin', // Define a route for "/signin"
+    name: 'signin',
+    component: Salma,
+  },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

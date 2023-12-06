@@ -1,0 +1,152 @@
+<template>
+
+    <main>
+      <section>
+      <div class="header">
+        <h1>LaRue Fashion</h1>
+        <h2>WINTER SEASON</h2>
+        <p>2023/2024</p>
+        <button id="discoverButton">OPDAG</button>
+      </div>
+    
+      <div id="video-container">
+      <div class="overlay"></div>
+        <!-- Slides -->
+
+        <div class="mySlides">
+          <img src="img/produkt1.jpg" alt="Winter Collection 1">
+        </div>
+        <div class="mySlides">
+          <img src="img/produkt2.jpg" alt="Winter Collection 2">
+        </div>
+        <div class="mySlides">
+          <img src="img/produkt4.jpg" alt="Winter Collection 3">
+        </div>
+      </div>
+  
+    </section>
+
+
+      <div class="buy-section">
+        <h2>FIND ANDET LARUE</h2>
+      </div>
+
+
+      <div class="product">
+        <div class="image-wrapper">
+          <a href="buymode.html">
+        <img src="img/jakke1.jpg" alt="Product 1">
+      </a>
+        <h3>LR WINTER JACKET</h3>
+        <p>1200.00 DKK</p>
+      </div>
+
+      <div class="image-wrapper">
+        <img src="img/jakke3.jpg" alt="Product 2">
+        <h3>LR WINTER JACKET 2</h3>
+        <p>1800.00 DKK</p>
+      </div>
+
+      <div class="image-wrapper">
+        <a href="buymode2.html">
+        <img src="img/trak1.jpg" alt="Product 3">
+      </a>
+        <h3>WHITE LRACTIVE</h3>
+        <p>679.00 DKK</p>
+      </div>
+    </div>
+
+
+    <div class="green-box">
+      <h2>MØD VORES TO KANDIDATER</h2>
+      <div class="candidates">
+          <div class="candidate">
+              <img src="img/abdi.jpg" alt="Abdi og hans favoritter">
+              <p>ABDI OG HANS FAVORITTER</p>
+          </div>
+          <div class="candidate">
+              <img src="img/amin.jpg" alt="Amin og hans favoritter">
+              <p>AMIN OG HANS FAVORITTER</p>
+          </div>
+      </div>
+  </div>
+  
+
+      
+    </main>
+
+
+  <footer>
+    <h2 class="footer-heading">LaRue Fashion</h2>
+
+
+    <div class="columns">
+    <div class="column">
+        <h3>LARUE FASHION</h3>
+        <ul class="submenu">
+            <li class="submenu-item">MODE</li>
+            <li class="submenu-item">FIND OS HER</li>
+            <li class="submenu-item">FØLG DIN ORDRE</li>
+        </ul>
+    </div>
+
+    <div class="column">
+        <h3>INFORMATION</h3>
+        <ul class="submenu">
+            <li class="submenu-item">FRAGT OG LEVERING</li>
+            <li class="submenu-item">HANDELSBETINGELSER</li>
+            <li class="submenu-item">HJÆLP & FAQ</li>
+            <li class="submenu-item">AFMELD</li>
+        </ul>
+    </div>
+
+    <div class="column">
+      <a href="omos.html">
+        <h3>OM OS</h3>
+      </a>
+        <ul class="submenu">
+            <li class="submenu-item">KONTAKT OS</li>
+            <li class="submenu-item">OM OS</li>
+            <li class="submenu-item">TERMS OF SERVICE</li>
+            <li class="submenu-item">REFUND POLICY</li>
+        </ul>
+    </div>
+  </div>
+
+    <div class="divider"></div>
+
+    <div class="footer-list">
+      <ul>
+        <li>COOKIE PREFERENCES</li>
+        <li>SITEMAP</li>
+        <li>PERSONDATA</li>
+        <li>POLITIKVILKÅR</li>
+        <li>FOR BRUG</li>
+      </ul>
+       <div class="icons">
+      <ul>
+        <li>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </li>
+    </ul>
+      </div>
+    </div>
+    <div class="footer-images">
+      <img src="img/pay.png" alt="alt du kan betale med på Larue Fashion">
+    </div>
+    <div class="footer-text">
+      <p>©2023 LARUE DREVET AF SHOPIFY</p>
+    </div>
+</footer>
+
+</template>
+
+<script setup>
+
+</script>
+
+<style>
+
+</style>
