@@ -78,6 +78,7 @@
     display: block;
     margin:0 auto;
     overflow:visible;
+    max-width: 550px;
   }
   
 
@@ -167,7 +168,7 @@
 
 
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .header h1 {
       font-size: 120px;
     }
@@ -187,6 +188,9 @@
   
     .prev, .next {
       display: inline-block; 
+    }
+    .mySlides img {
+      max-width: 1024px;
     }
   }
   
@@ -211,6 +215,12 @@
   
     .prev, .next {
       display: inline-block; 
+    }
+    .mySlides img {
+      display: block;
+      margin:0 auto;
+      overflow:visible;
+      max-width: 768px;
     }
   }
   
