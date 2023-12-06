@@ -9,6 +9,7 @@
       </ul>
     </div>
     </section>
+
     <nav>
         <div class="branding">
             <a href="index.html">
@@ -16,11 +17,11 @@
             </a>
         </div>
         <ul v-show="!mobile" class="navigation">
-            <li><a class="link" href="wintercollection.html">Fashion</a></li>
-            <li><a class="link" href="index.html">Home</a></li>
-            <span class="redd">
-            <li><a class="link" href="buymode.html">Udsalg</a></li>
-        </span>
+            <RouterLink class="link" to="/">moo</RouterLink>
+            <RouterLink class="link" to="/salma">moo</RouterLink>
+            <RouterLink class="link" to="">moo</RouterLink>
+            <RouterLink class="link" to="">moo</RouterLink>
+
         </ul>
         <ul v-show="!mobile" class="navigationicons">
             <li><i class="fa-solid fa-magnifying-glass"><a href="#"></a></i></li>

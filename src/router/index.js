@@ -1,18 +1,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-
 // Import your components
-import Claudia from './views/Claudia.vue';
-import Salma from './views/Salma.vue';
+import Home from '../views/Home.vue';
+import Salma from '../views/Salma.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Claudia,
+    name: 'Home',
+    component: Home,
   },
   {
-    path: '/signin', // Define a route for "/signin"
-    name: 'signin',
+    path: '/salma', // Define a route for "/signin"
+    name: 'Salma',
     component: Salma,
   },
 ];
