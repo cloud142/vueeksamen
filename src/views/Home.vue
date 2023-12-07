@@ -25,8 +25,6 @@
       </div>
   
     </section>
-
-
       <div class="buy-section">
         <h2>FIND ANDET LARUE</h2>
       </div>
@@ -57,7 +55,6 @@
       </div>
     </div>
 
-
     <div class="green-box">
       <h2>MØD VORES TO KANDIDATER</h2>
       <div class="candidates">
@@ -70,17 +67,10 @@
               <p>AMIN OG HANS FAVORITTER</p>
           </div>
       </div>
-  </div>
-  
-
-      
+  </div>  
     </main>
-
-
-  <footer>
+ <footer>
     <h2 class="footer-heading">LaRue Fashion</h2>
-
-
     <div class="columns">
     <div class="column">
         <h3>LARUE FASHION</h3>
@@ -145,12 +135,39 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
+ onMounted(() => {
+  
+let slideIndex = 0;
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // Skift billede hvert 2000 millisekunder (2 sekunder)
+}
+
+// Kald showSlides funktionen for at starte slideshowet
+showSlides();
+
+})
 
 </script>
 
 <style>
 
-  
 .header {
     text-align: center;
     padding: 20px;
@@ -192,7 +209,7 @@
     color: #fff;
   }
   
-  button {
+  #discoverButton {
     font-size: 16px;
     padding: 10px 30px;
     background-color: #fff;

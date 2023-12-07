@@ -145,7 +145,6 @@ footer p {
   .column {
     flex: 0 0 20%;
     margin: 0 auto;
-    color: #EF4545;
   }
   
   .icons ul  {
@@ -175,9 +174,7 @@ footer p {
 }
 
 @media (min-width: 1024px) {
-  .column {
-    color: blue;
-  }
+
   footer {
     padding: 20px;
   }

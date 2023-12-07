@@ -58,64 +58,63 @@
 
       <div class="product-container" id="productContainer">
         <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
-        <div class="product">
-          <a href="buymode2.html">
-            <img src="./img/trak1.jpg" alt="WHITE LRACTIVE">
+        <div class="productt">
+
+            <img src="img/trak1.jpg" alt="WHITE LRACTIVE">
             <div class="product-info">
               <p class="product-name">WHITE LRACTIVE</p>
               <p class="product-price">Pris: 679 DKK</p>
             </div>
-          </a>
+
         </div>
 
         <div class="productt">
-          <a href="buymode.html">
-            <img src="./img/jakke1.jpg" alt="LR WINTER JACKET 2">
+
+            <img src="img/jakke1.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
             </div>
-          </a>
+
         </div>
 
         <div class="productt">
-          <a href="buymode.html">
-            <img src="./img/jakke2.jpg" alt="LR WINTER JACKET 2">
+
+            <img src="img/jakke2.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
             </div>
-          </a>
+
         </div>
 
         <div class="productt">
-          <a href="buymode.html">
-            <img src="./img/jakke3.jpg" alt="LR WINTER JACKET 2">
+
+            <img src="img/jakke3.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
             </div>
-          </a>
+
         </div>
 
         <div class="productt">
-          <a href="buymode.html">
-            <img src="./img/trak2.jpg" alt="WHITE LRACTIVE">
+
+            <img src="img/trak2.jpg" alt="WHITE LRACTIVE">
             <div class="product-info">
               <p class="product-name">WHITE LRACTIVE</p>
               <p class="product-price">Pris: 679 DKK</p>
             </div>
-          </a>
+
         </div>
 
         <div class="productt">
-          <a href="buymode.html">
-            <img src="./img/jakke4.jpg" alt="LR WINTER JACKET 2">
+            <img src="img/jakke4.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
             </div>
-          </a>
+
         </div>
 
       </div>
@@ -186,12 +185,60 @@
 </footer>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
+
+ onMounted(() => {
+  
+function updateProducts() {
+  const productContainer = document.getElementById("productContainer");
+  productContainer.innerHTML = "";
+
+  products.forEach(product => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+
+    const imageElement = document.createElement("img");
+    imageElement.src = product.image;
+    imageElement.alt = product.name;
+
+    const infoElement = document.createElement("div");
+    infoElement.classList.add("product-info");
+    infoElement.innerHTML = `
+      <p class="product-name">${product.name}</p>
+      <p class="product-price">Pris: ${product.price} DKK</p>
+    `;
+
+    productElement.appendChild(imageElement);
+    productElement.appendChild(infoElement);
+
+    productContainer.appendChild(productElement);
+  });
+}
+
+  
+  function applyFilters() {
+    // Implementer logikken til filtrering baseret på valgte filtre
+    // Opdater resultCount med det nye antal resultater
+    const resultCount = document.getElementById("resultCount");
+    resultCount.innerText = `${products.length} result(s)`;
+  }
+  
+  function resetFilters() {
+    // Implementer logikken til at nulstille filtre
+    // Opdater resultCount med det samlede antal resultater
+    const resultCount = document.getElementById("resultCount");
+    resultCount.innerText = " result(s)";
+  }
+  
+  // Opdater produkter ved indlæsning af siden
+  updateProducts();
+  
+})
 
 </script>
 
 <style>
-
 
 .winter-header {
 text-align: center;
@@ -240,8 +287,8 @@ font-size: 16px;
   padding: 10px;
 }
 
-.product img {
-  width: 100%; 
+.productt img {
+  width: 30%; 
   height: auto;
   display: block;
 }
