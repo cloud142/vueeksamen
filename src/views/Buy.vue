@@ -225,10 +225,10 @@
 //CLAUDIA
 import { ref, onMounted } from 'vue'
 
- onMounted(() => {
-
+onMounted(() => {
 let shoppingCart = [];
 let totalCost = 0;
+
 
 function addToCart(product, price) {
     shoppingCart.push({ product, price });
@@ -236,6 +236,7 @@ function addToCart(product, price) {
     updateCartOverlay();
     slideInCartOverlay();
 }
+
 
 function removeFromCart(index) {
     totalCost -= shoppingCart[index].price;
@@ -270,6 +271,7 @@ function updateCartOverlay() {
         cartOverlay.innerHTML += `<p>TOTAL: ${totalCost}.00 DKK </p>`;
     }
 }
+onMounted(() => {
 
 document.addEventListener('click', function(event) {
     const overlay = document.getElementById('overlay');
@@ -306,6 +308,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
+});
 });
 </script>
 
