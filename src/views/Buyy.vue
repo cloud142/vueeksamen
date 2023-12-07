@@ -221,10 +221,20 @@
 </template>
 
 <script setup>
+//CLAUDIA
 import { ref, onMounted } from 'vue'
 
  onMounted(() => {
-  
+    document.addEventListener('DOMContentLoaded', function () {
+    const circles = document.querySelectorAll('.circle');
+
+    circles.forEach(circle => {
+        circle.addEventListener('click', function () {
+            circles.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
 let shoppingCart = [];
 let totalCost = 0;
 

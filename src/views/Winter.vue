@@ -186,6 +186,8 @@
 </template>
 
 <script setup>
+
+// SALMA
 import { ref, onMounted } from 'vue'
 
  onMounted(() => {
@@ -196,7 +198,7 @@ function updateProducts() {
 
   products.forEach(product => {
     const productElement = document.createElement("div");
-    productElement.classList.add("product");
+    productElement.classList.add("productt");
 
     const imageElement = document.createElement("img");
     imageElement.src = product.image;

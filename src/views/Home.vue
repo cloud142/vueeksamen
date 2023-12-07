@@ -135,6 +135,8 @@
 </template>
 
 <script setup>
+
+//SALMA
 import { ref, onMounted } from 'vue'
 
  onMounted(() => {
@@ -225,7 +227,7 @@ showSlides();
 
   }
 
-  button:hover {
+  #discoverButton:hover {
     background-color: #3C412A; 
     color: #fff; 
   }
@@ -246,7 +248,8 @@ showSlides();
     display: block;
     margin:0 auto;
     overflow:visible;
-    max-width: 550px;
+    width: 900px;
+    height: 400px;
   }
   
 
@@ -256,7 +259,7 @@ showSlides();
 
   .buy-section {
     text-align: center;
-    margin: 20px 0; 
+    margin: 200px 0 10px; 
   }
   
   .buy-section p {
@@ -356,7 +359,7 @@ showSlides();
       display: inline-block; 
     }
     .mySlides img {
-      max-width: 1024px;
+      max-width: 1980px;
     }
   }
   

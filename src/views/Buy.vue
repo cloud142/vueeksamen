@@ -58,7 +58,7 @@
 
 
   <div class="putit">
-    <button onclick="addToCart('LR WINTER JACKET', 679.00)">LÆG I INDKØBSKURV</button>
+    <button onclick="addToCart ('LR WINTER JACKET', 900.00)">LÆG I INDKØBSKURV</button>
   </div>
 
   
@@ -222,10 +222,11 @@
 </template>
 
 <script setup>
+//CLAUDIA
 import { ref, onMounted } from 'vue'
 
  onMounted(() => {
-  
+
 let shoppingCart = [];
 let totalCost = 0;
 
@@ -282,9 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let overlay = document.getElementById('overlay');
     let closeBtn = document.getElementById('close-btn');
 
-    function showOverlay() {
-        overlay.style.display = 'flex';
-    }
 
 
     function hideOverlay() {
@@ -298,11 +296,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-
-
 })
+document.addEventListener('DOMContentLoaded', function () {
+    const circles = document.querySelectorAll('.circle');
 
+    circles.forEach(circle => {
+        circle.addEventListener('click', function () {
+            circles.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
 </script>
+
 <style>
 #overlay {
     display: none;
