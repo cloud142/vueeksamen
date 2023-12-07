@@ -17,28 +17,24 @@
             </a>
         </div>
         <ul v-show="!mobile" class="navigation">
-            <RouterLink class="link" to="/">moo</RouterLink>
-            <RouterLink class="link" to="/salma">moo</RouterLink>
-            <RouterLink class="link" to="">moo</RouterLink>
-            <RouterLink class="link" to="">moo</RouterLink>
-
+            <RouterLink class="link" to="/winter">FASHION</RouterLink>
+            <RouterLink class="link" to="/">HOME</RouterLink>
+            <RouterLink class="link" to="/buy">UDSALG</RouterLink>
         </ul>
         <ul v-show="!mobile" class="navigationicons">
-            <li><i class="fa-solid fa-magnifying-glass"><a href="#"></a></i></li>
-            <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
-            <li><i class="fa-regular fa-star"><a href="#"></a></i></li>
-            <li><i class="fa-solid fa-cart-shopping"><a href="#"></a></i></li>
+            <RouterLink class="link" to=""><i class="fa-solid fa-magnifying-glass"></i></RouterLink>
+            <RouterLink class="link" to="/salma"><i class="fa-regular fa-user"></i></RouterLink>
+            <RouterLink class="link" to=""><i class="fa-regular fa-star"></i></RouterLink>
+            <RouterLink class="link" to=""><i class="fa-solid fa-cart-shopping"></i></RouterLink>
         </ul>
         <div class="icon">
             <i @click="toggleMobileNav"  v-show="mobile" class="fa-solid fa-bars" :class="{'icon-active' : moblieNav}"></i>
         </div>
         <transition name="moblie-nav">
          <ul v-show="moblieNav" class="dropdown-nav">
-            <li><a class="link" href="wintercollection.html">Fashion</a></li>
-            <li><a class="link" href="index.html">Home</a></li>
-            <span class="redd">
-            <li><a class="link" href="buymode.html">Udsalg</a></li>
-            </span>
+            <RouterLink class="link" to="/winter">FASHION</RouterLink>
+            <RouterLink class="link" to="/">HOME</RouterLink>
+            <RouterLink class="link" to="/buy">UDSALG</RouterLink>
          </ul>
         </transition>
     </nav>
@@ -163,7 +159,7 @@
     .navigationicons i, .quantity{
     font-size: 20px;
     margin-left: -70px;
-    margin-right: 70px;
+    margin-right: 20px;
     margin-top: 25px;
     transition: .5s ease all;
 
@@ -204,12 +200,11 @@
         top: 0; // styre den hvor meget den er på toppen
         left: 0; //Styre den hvilken side den er på
 
-        li {
+        .link {
             margin-left: 45px;
             margin-top: 10px;
-            .link{
                 color: #161618;
-            }
+
         }
     }
 

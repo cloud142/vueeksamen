@@ -34,9 +34,10 @@
 
       <div class="product">
         <div class="image-wrapper">
-          <a href="buymode.html">
+          <RouterLink to="/buy">
         <img src="img/jakke1.jpg" alt="Product 1">
-      </a>
+      </RouterLink>
+
         <h3>LR WINTER JACKET</h3>
         <p>1200.00 DKK</p>
       </div>
@@ -48,9 +49,9 @@
       </div>
 
       <div class="image-wrapper">
-        <a href="buymode2.html">
+        <RouterLink to="/buyy">
         <img src="img/trak1.jpg" alt="Product 3">
-      </a>
+      </RouterLink>
         <h3>WHITE LRACTIVE</h3>
         <p>679.00 DKK</p>
       </div>
@@ -149,4 +150,227 @@
 
 <style>
 
+  
+.header {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header h1 {
+    font-size: 30px; 
+    font-weight: bold;
+    position: absolute; 
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    color: #fff;
+  }
+  
+  .header h2 {
+    font-size: 18px; 
+    position: absolute; 
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff; 
+
+  }
+  
+  .header p {
+    font-size: 18px; 
+    margin-bottom: 0; 
+    position: absolute; 
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    color: #fff;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: #000000; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    position: absolute; 
+    top: 52%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+
+  }
+
+  button:hover {
+    background-color: #3C412A; 
+    color: #fff; 
+  }
+  
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mySlides {
+    text-align: center;
+    margin-top: -39px;
+    z-index: 2;
+  }
+
+  .mySlides img {
+    display: block;
+    margin:0 auto;
+    overflow:visible;
+    max-width: 550px;
+  }
+  
+
+  .prev, .next {
+    display: none; 
+  }
+
+  .buy-section {
+    text-align: center;
+    margin: 20px 0; 
+  }
+  
+  .buy-section p {
+    font-size: 20px;
+  }
+  
+
+  .product { 
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product img {
+    width: 80%;
+    height: auto; 
+    margin: 10px auto; 
+  }
+  
+  .product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .product p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .image-wrapper {
+    text-align: left;
+    margin: 0 10px;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+
+  .green-box {
+    background-color: #3C412A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; 
+  }
+
+
+.green-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.candidates {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.candidate {
+    text-align: center;
+    max-width: 300px;
+}
+
+.candidate img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.candidate p {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+}
+
+
+
+  @media (min-width: 1024px) {
+    .header h1 {
+      font-size: 120px;
+    }
+  
+    .header h2 {
+      font-size: 25px;
+    }
+  
+    .header p {
+      font-size: 20px;
+      margin-bottom: 15px; 
+    }
+  
+    .slideshow-container {
+      max-width: 800px; 
+    }
+  
+    .prev, .next {
+      display: inline-block; 
+    }
+    .mySlides img {
+      max-width: 1024px;
+    }
+  }
+  
+  
+  @media (min-width: 768px) {
+    
+    .header h1 {
+      font-size: 50px;
+    }
+  
+    .header h2 {
+      font-size: 24px;
+    }
+  
+    .header p {
+      font-size: 18px;
+    }
+  
+    .slideshow-container {
+      max-width: 800px; 
+    }
+  
+    .prev, .next {
+      display: inline-block; 
+    }
+    .mySlides img {
+      display: block;
+      margin:0 auto;
+      overflow:visible;
+      max-width: 768px;
+    }
+  }
+  
 </style>
