@@ -58,7 +58,7 @@
 
 
   <div class="putit">
-    <button onclick="addToCart ('LR WINTER JACKET', 900.00)">LÆG I INDKØBSKURV</button>
+    <button @click="addToCart ('LR WINTER JACKET', 900.00)">LÆG I INDKØBSKURV</button>
   </div>
 
   
@@ -221,59 +221,15 @@
 </footer>
 </template>
 
+  
 <script setup>
 //CLAUDIA
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue';
+
 
 onMounted(() => {
-let shoppingCart = [];
-let totalCost = 0;
 
-
-function addToCart(product, price) {
-    shoppingCart.push({ product, price });
-    totalCost += price;
-    updateCartOverlay();
-    slideInCartOverlay();
-}
-
-
-function removeFromCart(index) {
-    totalCost -= shoppingCart[index].price;
-    shoppingCart.splice(index, 1);
-    updateCartOverlay();
-}
-
-function openCartOverlay() {
-    updateCartOverlay();
-    slideInCartOverlay();
-}
-
-
-function slideInCartOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.right = '0';
-    overlay.style.display = 'flex';
-    overlay.classList.add('slide-in');
-}
-
-function updateCartOverlay() {
-    const cartOverlay = document.getElementById('cartOverlay');
-    cartOverlay.innerHTML = '<h2>KURV</h2>';
-    
-    if (shoppingCart.length === 0) {
-        cartOverlay.innerHTML += '<p>DIN KURV ER TOM.</p>';
-    } else {
-        for (let i = 0; i < shoppingCart.length; i++) {
-            const { product, price } = shoppingCart[i];
-            cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK <button onclick="removeFromCart(${i})">SLET</button></p>`;
-        }
-        cartOverlay.innerHTML += `<p>TOTAL: ${totalCost}.00 DKK </p>`;
-    }
-}
-onMounted(() => {
-
-document.addEventListener('click', function(event) {
+  document.addEventListener('click', function(event) {
     const overlay = document.getElementById('overlay');
     const closeBtn = document.getElementById('closeBtn');
     if (event.target === overlay || event.target === closeBtn) {
@@ -298,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-})
+
 document.addEventListener('DOMContentLoaded', function () {
     const circles = document.querySelectorAll('.circle');
 
@@ -311,6 +267,56 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 });
 </script>
+
+<script>
+    export default {
+      data() {
+          return {
+            shoppingCart:[],
+            totalCost: 0
+    }
+},
+
+   methods: {
+    addToCart(product, price) {
+      this.shoppingCart.push({ product, price });
+      this.totalCost += price;
+      this.updateCartOverlay();
+      this.slideInCartOverlay();
+    },
+    removeFromCart(index) {
+      this.totalCost -= shoppingCart[index].price;
+      shoppingCart.splice(index, 1);
+      updateCartOverlay();
+    },
+    openCartOverlay() {
+      updateCartOverlay();
+      slideInCartOverlay();
+    },
+    slideInCartOverlay() {
+      const overlay = document.getElementById('overlay');
+      overlay.style.right = '0';
+      overlay.style.display = 'flex';
+      overlay.classList.add('slide-in');
+    },
+    updateCartOverlay() {
+      const cartOverlay = document.getElementById('cartOverlay');
+      cartOverlay.innerHTML = '<h2>KURV</h2>';
+    
+        if (this.shoppingCart.length === 0) {
+          cartOverlay.innerHTML += '<p>DIN KURV ER TOM.</p>';
+       } else {
+          for (let i = 0; i < this.shoppingCart.length; i++) {
+              const { product, price } = this.shoppingCart[i];
+              cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK <button onclick="removeFromCart(${i})">SLET</button></p>`;
+          }
+          cartOverlay.innerHTML += `<p>TOTAL: ${this.totalCost}.00 DKK </p>`;
+        }
+      }
+  }
+  
+ };
+  </script>
 
 <style>
 #overlay {

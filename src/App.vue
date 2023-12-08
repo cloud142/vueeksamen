@@ -13,7 +13,7 @@ import Claudia from './components/Claudia.vue';
 	components: {
 		Claudia,  
 	}
-  
+
   };
 
   </script>
