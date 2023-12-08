@@ -229,13 +229,7 @@ import { ref, onMounted } from 'vue';
 
 onMounted(() => {
 
-  document.addEventListener('click', function(event) {
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('closeBtn');
-    if (event.target === overlay || event.target === closeBtn) {
-        closeCartOverlay();
-    }
-});
+  
 
 document.addEventListener('DOMContentLoaded', function () {
     let overlay = document.getElementById('overlay');
@@ -285,13 +279,14 @@ document.addEventListener('DOMContentLoaded', function () {
       this.slideInCartOverlay();
     },
     removeFromCart(index) {
-      this.totalCost -= shoppingCart[index].price;
-      shoppingCart.splice(index, 1);
-      updateCartOverlay();
+      this.console.log ('hest');
+      this.totalCost -= this.shoppingCart[index].price;
+      this.shoppingCart.splice(index, 1);
+      this.updateCartOverlay();
     },
     openCartOverlay() {
-      updateCartOverlay();
-      slideInCartOverlay();
+      this.updateCartOverlay();
+      this.slideInCartOverlay();
     },
     slideInCartOverlay() {
       const overlay = document.getElementById('overlay');
@@ -308,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
        } else {
           for (let i = 0; i < this.shoppingCart.length; i++) {
               const { product, price } = this.shoppingCart[i];
-              cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK <button onclick="removeFromCart(${i})">SLET</button></p>`;
+              cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK <button @click="removeFromCart(${i})">SLET</button></p>`;
           }
           cartOverlay.innerHTML += `<p>TOTAL: ${this.totalCost}.00 DKK </p>`;
         }
