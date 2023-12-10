@@ -229,8 +229,6 @@ import { ref, onMounted } from 'vue';
 
 onMounted(() => {
 
-  
-
 document.addEventListener('DOMContentLoaded', function () {
     let overlay = document.getElementById('overlay');
     let closeBtn = document.getElementById('close-btn');
@@ -303,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
        } else {
           for (let i = 0; i < this.shoppingCart.length; i++) {
               const { product, price } = this.shoppingCart[i];
-              cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK <button @click="removeFromCart(${i})">SLET</button></p>`;
+              cartOverlay.innerHTML += `<p>${product} - ${price}.00 DKK</p>`;
           }
           cartOverlay.innerHTML += `<p>TOTAL: ${this.totalCost}.00 DKK </p>`;
         }

@@ -134,16 +134,17 @@
 
 </template>
 
-<script setup>
 
-//SALMA
-import { ref, onMounted } from 'vue'
+<script>
+export default {
+  data() {
+          return {
+            slideIndex: 0
+    }
+},
 
- onMounted(() => {
-  
-let slideIndex = 0;
-
-function showSlides() {
+  methods: {
+    showSlides() {
   let i;
   const slides = document.getElementsByClassName("mySlides");
 
@@ -161,11 +162,11 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Skift billede hvert 2000 millisekunder (2 sekunder)
 }
 
-// Kald showSlides funktionen for at starte slideshowet
-showSlides();
+},
+showSlides() {
 
-})
-
+}
+};
 </script>
 
 <style>

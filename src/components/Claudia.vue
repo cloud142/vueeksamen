@@ -12,9 +12,9 @@
 
     <nav>
         <div class="branding">
-            <a href="index.html">
+             <RouterLink to="/">
             <img src="img/logo.png" alt="LaRue Fashion">
-            </a>
+             </RouterLink>
         </div>
         <ul v-show="!mobile" class="navigation">
             <RouterLink class="link" to="/winter">FASHION</RouterLink>
@@ -42,6 +42,8 @@
   </template>
   
   <script>
+import { RouterLink } from 'vue-router';
+
   export default {
     name: "navigation",
     data() {
@@ -52,7 +54,7 @@
             windowWidth: null,
         };
     },
-    created(){
+    created() {
         window.addEventListener("resize", this.checkScreen);
         this.checkScreen();
     },
@@ -60,17 +62,15 @@
         toggleMobileNav() {
             this.moblieNav = !this.moblieNav;
         },
-
         updateScroll() {
             const scrollPosition = window.scrollY;
             if (scrollPosition > 50) {
                 this.scrolledNav = true;
                 return;
             }
-            this.scrolledNav = false
+            this.scrolledNav = false;
         },
-
-        checkScreen(){
+        checkScreen() {
             this.windowWidth = window.innerWidth;
             if (this.windowWidth <= 768) {
                 this.mobile = true;
@@ -81,7 +81,8 @@
             return;
         },
     },
-  };
+    components: { RouterLink }
+};
   </script>
   
   <style lang="scss" scoped>
