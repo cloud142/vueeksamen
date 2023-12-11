@@ -19,15 +19,15 @@
 
 
   <div class="imgstor">
-    <img src="img/trak1.jpg" alt="WHITE LRACTIVE">
+    <img src="../img/trak1.jpg" alt="WHITE LRACTIVE">
     <i class="fa-solid fa-arrow-right"></i>
   </div>
 
 
   <div class="imglille">
-    <img src="img/trak2.jpg" alt="WHITE LRACTIVE">
-    <img src="img/trak1.jpg" alt="WHITE LRACTIVE">
-    <img src="img/trak2.jpg" alt="WHITE LRACTIVE">
+    <img src="../img/trak2.jpg" alt="WHITE LRACTIVE">
+    <img src="../img/trak1.jpg" alt="WHITE LRACTIVE">
+    <img src="../img/trak2.jpg" alt="WHITE LRACTIVE">
   </div>
 </section>
 
@@ -61,7 +61,7 @@
   <div id="overlay">
     <div class="flex-container">
         <div class="cart-item">
-            <img src="img/trak1.jpg" alt="WHITE LRACTIVE">
+            <img src="../img/trak1.jpg" alt="WHITE LRACTIVE">
             <div id="cartOverlay">
             </div>
           </div>
@@ -127,7 +127,7 @@
   <div class="allemini">
   <div class="imglig">
     <RouterLink :to="'/buy'">
-    <img src="img/jakke1.jpg" alt="Product 1">
+    <img src="../img/jakke1.jpg" alt="Product 1">
 </RouterLink>
   <span class="redd">900.00 DKK</span>
   <span class="redd">25%</span>
@@ -136,14 +136,14 @@
 
 
   <div class="imglig2">
-    <img src="img/jakke2.jpg" alt="Product 2">
+    <img src="../img/jakke2.jpg" alt="Product 2">
     <h3>LR winter jacket</h3>
     <p>1.200.00 DKK</p>
   </div>
 
 
   <div class="imglig3">
-    <img src="img/jakke1.jpg" alt="Product 3">
+    <img src="../img/jakke1.jpg" alt="Product 3">
     <h3>LR winter jacket</h3>
     <p>1.200.00 DKK</p>
   </div>
@@ -177,9 +177,7 @@
 
 
     <div class="column">
-      <a href="omos.html">
         <h3>OM OS</h3>
-      </a>
         <ul class="submenu">
             <li class="submenu-item">KONTAKT OS</li>
             <li class="submenu-item">OM OS</li>
@@ -212,7 +210,7 @@
       </div>
     </div>
     <div class="footer-images">
-      <img src="img/pay.png" alt="alt du kan betale med på Larue Fashion">
+      <img src="../img/pay.png" alt="alt du kan betale med på Larue Fashion">
     </div>
     <div class="footer-text">
       <p>©2023 LARUE DREVET AF SHOPIFY</p>

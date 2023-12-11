@@ -23,15 +23,15 @@
 
 
   <div class="imgstor">
-    <img src="img/jakke1.jpg" alt="LR winter jacket">
+    <img src="../img/jakke1.jpg" alt="LR winter jacket">
     <i class="fa-solid fa-arrow-right"></i>
   </div>
 
 
   <div class="imglille">
-    <img src="img/jakke2.jpg" alt="LR winter jacket">
-    <img src="img/jakke4.jpg" alt="LR winter jacket">
-    <img src="img/jakke3.jpg" alt="LR winter jacket">
+    <img src="../img/jakke2.jpg" alt="LR winter jacket">
+    <img src="../img/jakke4.jpg" alt="LR winter jacket">
+    <img src="../img/jakke3.jpg" alt="LR winter jacket">
   </div>
 </section>
 
@@ -65,7 +65,7 @@
   <div id="overlay">
     <div class="flex-container">
         <div class="cart-item">
-            <img src="img/jakke1.jpg" alt="LR Winter Jacket">
+            <img src="../img/jakke1.jpg" alt="LR Winter Jacket">
             <div id="cartOverlay">
             </div>
           </div>
@@ -131,7 +131,7 @@
   <div class="allemini">
   <div class="imglig">
     <RouterLink :to="'/buyy'">
-    <img src="img/trak1.jpg" alt="Product 1">
+    <img src="../img/trak1.jpg" alt="Product 1">
 </RouterLink>
     <h3>WHITE LRACTIVE</h3>
     <p>679.00 DKK</p>
@@ -139,14 +139,14 @@
 
 
   <div class="imglig2">
-    <img src="img/trak1.jpg" alt="Product 2">
+    <img src="../img/trak1.jpg" alt="Product 2">
     <h3>WHITE LRACTIVE</h3>
     <p>679.00 DKK</p>
   </div>
 
 
   <div class="imglig3">
-    <img src="img/trak1.jpg" alt="Product 3">
+    <img src="../img/trak1.jpg" alt="Product 3">
     <h3>WHITE LRACTIVE</h3>
     <p>679.00 DKK</p>
   </div>
@@ -213,7 +213,7 @@
       </div>
     </div>
     <div class="footer-images">
-      <img src="img/pay.png" alt="alt du kan betale med på Larue Fashion">
+      <img src="../img/pay.png" alt="alt du kan betale med på Larue Fashion">
     </div>
     <div class="footer-text">
       <p>©2023 LARUE DREVET AF SHOPIFY</p>

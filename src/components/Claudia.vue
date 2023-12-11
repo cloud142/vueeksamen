@@ -13,7 +13,7 @@
     <nav>
         <div class="branding">
              <RouterLink to="/">
-            <img src="img/logo.png" alt="LaRue Fashion">
+            <img src="../img/logo.png" alt="LaRue Fashion">
              </RouterLink>
         </div>
         <ul v-show="!mobile" class="navigation">

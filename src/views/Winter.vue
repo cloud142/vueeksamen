@@ -60,7 +60,7 @@
         <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
         <div class="productt">
 
-            <img src="img/trak1.jpg" alt="WHITE LRACTIVE">
+            <img src="../img/trak1.jpg" alt="WHITE LRACTIVE">
             <div class="product-info">
               <p class="product-name">WHITE LRACTIVE</p>
               <p class="product-price">Pris: 679 DKK</p>
@@ -70,7 +70,7 @@
 
         <div class="productt">
 
-            <img src="img/jakke1.jpg" alt="LR WINTER JACKET 2">
+            <img src="../img/jakke1.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
@@ -80,7 +80,7 @@
 
         <div class="productt">
 
-            <img src="img/jakke2.jpg" alt="LR WINTER JACKET 2">
+            <img src="../img/jakke2.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
@@ -90,7 +90,7 @@
 
         <div class="productt">
 
-            <img src="img/jakke3.jpg" alt="LR WINTER JACKET 2">
+            <img src="../img/jakke3.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
@@ -100,7 +100,7 @@
 
         <div class="productt">
 
-            <img src="img/trak2.jpg" alt="WHITE LRACTIVE">
+            <img src="../img/trak2.jpg" alt="WHITE LRACTIVE">
             <div class="product-info">
               <p class="product-name">WHITE LRACTIVE</p>
               <p class="product-price">Pris: 679 DKK</p>
@@ -109,7 +109,7 @@
         </div>
 
         <div class="productt">
-            <img src="img/jakke4.jpg" alt="LR WINTER JACKET 2">
+            <img src="../img/jakke4.jpg" alt="LR WINTER JACKET 2">
             <div class="product-info">
               <p class="product-name">LR WINTER JACKET 2</p>
               <p class="product-price">Pris: 1800 DKK</p>
@@ -177,7 +177,7 @@
       </div>
     </div>
     <div class="footer-images">
-      <img src="img/pay.png" alt="alt du kan betale med på Larue Fashion">
+      <img src="../img/pay.png" alt="alt du kan betale med på Larue Fashion">
     </div>
     <div class="footer-text">
       <p>©2023 LARUE DREVET AF SHOPIFY</p>
