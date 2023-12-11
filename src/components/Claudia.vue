@@ -3,9 +3,9 @@
         <section>
       <div class="top-section">
       <ul class="main-list">
-        <li><a href="#">Find os her</a></li>
-        <li><a href="#">Let LaRue be your guide destination for Fashion!</a></li>
-        <li><a href="#">Denmark</a></li>
+        <li>Find os her</li>
+        <li>Let LaRue be your guide destination for Fashion!</li>
+        <li>Denmark</li>
       </ul>
     </div>
     </section>
