@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 import Salma from '../views/Salma.vue';
 import Buy from '../views/Buy.vue';
 import Buyy from '../views/Buyy.vue';
-import Winter from '../views/winter.vue';
+import Winter from '../views/Winter.vue';
 
 const routes = [
   {
