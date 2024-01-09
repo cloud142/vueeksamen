@@ -1,123 +1,94 @@
 <template>
-    <div class="salma-container">
-      <div class="form-container">
-        <div class="login-container">
-          <h2>Login</h2>
-          <form @submit.prevent="login" class="form">
-            <label>Brugernavn:</label>
-            <input v-model="loginUsername" type="text" required class="input-field">
-            <label>Kodeord:</label>
-            <input v-model="loginPassword" type="password" required class="input-field">
-            <button type="submit" class="submit-button">Log ind</button>
-            <div v-if="loginError" class="error-message">{{ loginError }}</div>
-          </form>
-        </div>
-        <div class="signup-container">
-          <h2>Tilmelding</h2>
-          <form @submit.prevent="signup" class="form">
-            <label>Brugernavn:</label>
-            <input v-model="signupUsername" type="text" required class="input-field">
-            <label>Kodeord:</label>
-            <input v-model="signupPassword" type="password" required class="input-field">
-            <button type="submit" class="submit-button">Tilmeld</button>
-            <div v-if="signupError" class="error-message">{{ signupError }}</div>
-          </form>
-        </div>
-      </div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form @submit.prevent="login" class="login-form">
+      <label for="username">Brugernavn:</label>
+      <input type="text" id="username" v-model="username" />
+
+      <label for="password">Adgangskode:</label>
+      <input type="password" id="password" v-model="password" />
+
+      <button type="submit">Log ind</button>
+    </form>
+    <div v-if="loggedIn" class="logged-in-info">
+      <p>Du er logget ind som {{ username }}</p>
+      <button @click="logout">Log ud</button>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        loginUsername: '',
-        loginPassword: '',
-        signupUsername: '',
-        signupPassword: '',
-        loginError: '',
-        signupError: ''
-      };
-    },
-    methods: {
-      login() {
-        // Nulstil fejlmeddelelser
-        this.loginError = '';
-  
-        // Simulerer en enkel autentifikation
-        if (this.loginUsername === 'bruger123' && this.loginPassword === 'kode123') {
-          console.log('Login successful');
-          // Yderligere handling, f.eks. navigering til en anden side
-          this.navigateToAnotherPage('forside.html');
-        } else {
-          this.loginError = 'Forkert brugernavn eller kodeord';
-        }
-      },
-      signup() {
-        // Nulstil fejlmeddelelser
-        this.signupError = '';
-  
-        // Simulerer en enkel tilmelding
-        if (this.signupUsername === 'tilmeld123' && this.signupPassword === 'kode123') {
-          console.log('Signup successful');
-          // Yderligere handling, f.eks. navigering til en anden side
-        } else {
-          this.signupError = 'Forkert brugernavn eller kodeord';
-        }
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      username: "",
+      password: "",
+      loggedIn: false
+    };
+  },
+  methods: {
+    login() {
+      // Simulering af login-logik (erstat dette med din faktiske logik)
+      const correctUsername = "bruger123";
+      const correctPassword = "kode123";
+
+      if (this.username === correctUsername && this.password === correctPassword) {
+        this.loggedIn = true;
+        this.$router.push({ name: 'Home', params: { username: this.username } });
+      } else {
+        alert("Forkert brugernavn eller adgangskode");
       }
+    },
+    logout() {
+      this.username = "";
+      this.password = "";
+      this.loggedIn = false;
+      this.$router.push({ name: 'Login' });
     }
-  };
-  </script>
-  
-  <style scoped>
-  .salma-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
   }
-  
-  .form-container {
-    display: flex;
-    justify-content: space-around;
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  .login-container,
-  .signup-container {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-field {
-    margin-bottom: 10px;
-    padding: 8px;
-  }
-  
-  .submit-button {
-    background-color: #3C412A;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #3C412A;
-  }
-  
-  .error-message {
-    color: red;
-    margin-top: 5px;
-  }
-  </style>
+};
+</script>
+
+<style scoped>
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #3C412A;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3C412A;
+}
+
+.logged-in-info {
+  margin-top: 20px;
+  text-align: center;
+}
+</style>
+
   
   

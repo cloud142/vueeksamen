@@ -118,75 +118,50 @@
         </div>
 
       </div>
-
-      
-
-  <footer>
-    <h2 class="footer-heading">LaRue Fashion</h2>
-
-
-    <div class="columns">
-    <div class="column">
-        <h3>LARUE FASHION</h3>
-        <ul class="submenu">
-            <li class="submenu-item">MODE</li>
-            <li class="submenu-item">FIND OS HER</li>
-            <li class="submenu-item">FØLG DIN ORDRE</li>
-        </ul>
-    </div>
-
-    <div class="column">
-        <h3>INFORMATION</h3>
-        <ul class="submenu">
-            <li class="submenu-item">FRAGT OG LEVERING</li>
-            <li class="submenu-item">HANDELSBETINGELSER</li>
-            <li class="submenu-item">HJÆLP & FAQ</li>
-            <li class="submenu-item">AFMELD</li>
-        </ul>
-    </div>
-
-    <div class="column">
-        <h3>OM OS</h3>
-        <ul class="submenu">
-            <li class="submenu-item">KONTAKT OS</li>
-            <li class="submenu-item">OM OS</li>
-            <li class="submenu-item">TERMS OF SERVICE</li>
-            <li class="submenu-item">REFUND POLICY</li>
-        </ul>
-    </div>
-  </div>
-
-    <div class="divider"></div>
-
-    <div class="footer-list">
-      <ul>
-        <li>COOKIE PREFERENCES</li>
-        <li>SITEMAP</li>
-        <li>PERSONDATA</li>
-        <li>POLITIKVILKÅR</li>
-        <li>FOR BRUG</li>
-      </ul>
-       <div class="icons">
-      <ul>
-        <li>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-tiktok"></i>
-        </li>
-    </ul>
-      </div>
-    </div>
-    <div class="footer-images">
-      <img src="../img/pay.png" alt="alt du kan betale med på Larue Fashion">
-    </div>
-    <div class="footer-text">
-      <p>©2023 LARUE DREVET AF SHOPIFY</p>
-    </div>
-</footer>
 </template>
-
 <script>
- 
+function updateProducts() {
+  const productContainer = document.getElementById("productContainer");
+  productContainer.innerHTML = "";
+
+  products.forEach(product => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+
+    const imageElement = document.createElement("img");
+    imageElement.src = product.image;
+    imageElement.alt = product.name;
+
+    const infoElement = document.createElement("div");
+    infoElement.classList.add("product-info");
+    infoElement.innerHTML = `
+      <p class="product-name">${product.name}</p>
+      <p class="product-price">Pris: ${product.price} DKK</p>
+    `;
+
+    productElement.appendChild(imageElement);
+    productElement.appendChild(infoElement);
+
+    productContainer.appendChild(productElement);
+  });
+}
+  function applyFilters() {
+    // Implementer logikken til filtrering baseret på valgte filtre
+    // Opdater resultCount med det nye antal resultater
+    const resultCount = document.getElementById("resultCount");
+    resultCount.innerText = `${products.length} result(s)`;
+  }
+  
+  function resetFilters() {
+    // Implementer logikken til at nulstille filtre
+    // Opdater resultCount med det samlede antal resultater
+    const resultCount = document.getElementById("resultCount");
+    resultCount.innerText = " result(s)";
+  }
+  
+  // Opdater produkter ved indlæsning af siden
+  updateProducts();
+  
 </script>
 
 <style>
