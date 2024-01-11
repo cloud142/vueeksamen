@@ -1,5 +1,10 @@
 <template>
- <header class="winter-header">
+  <div>
+    <header>
+      <div id="app"></div>
+    </header>
+
+    <header class="winter-header">
       <h1>WINTER SEASON</h1>
       <p class="sub-title">2023/2024</p>
       <p class="description">Let LaRue be your guide destination for Fashion!</p>
@@ -14,7 +19,7 @@
           <option value="Track suit">Track suit</option>
         </select>
       </div>
-    
+
       <div class="filter-group">
         <label for="color">Color:</label>
         <select id="color">
@@ -23,7 +28,7 @@
           <option value="Hvid">Hvid</option>
         </select>
       </div>
-    
+
       <div class="filter-group">
         <label for="size">Clothing Size:</label>
         <select id="size">
@@ -33,156 +38,180 @@
           <option value="large">Large</option>
         </select>
       </div>
-    
-      <button>Apply Filters</button>
-      <button>Reset All Filters</button>
+
+      <button @click="applyFilters">Apply Filters</button>
+      <button @click="resetFilters">Reset All Filters</button>
     </div>
-    
+
     <div id="resultCount">0 result(s)</div>
 
-    
     <div class="filters">
-  
+      <!-- Add more filters if needed -->
     </div>
-    
-    <div class="product-container" id="productContainer"></div>
-    <div class="container">
-        <div class="column" id="column1">
-          <!-- Produkter vil blive indsat dynamisk her ved hjælp af JavaScript -->
+
+    <div class="product-container" id="productContainer">
+      <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
+      <div class="productt" v-for="product in products" :key="product.name">
+        <a :href="product.link">
+          <img :src="product.image" :alt="product.name">
+          <div class="product-info">
+            <p class="product-name">{{ product.name }}</p>
+            <p class="product-price">Pris: {{ product.price }} DKK</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <h2 class="footer-heading">LaRue Fashion</h2>
+      <div class="columns">
+        <div class="column">
+          <h3>LARUE FASHION</h3>
+          <ul class="submenu">
+            <li class="submenu-item">MODE</li>
+            <li class="submenu-item">FIND OS HER</li>
+            <li class="submenu-item">FØLG DIN ORDRE</li>
+          </ul>
         </div>
-      
-        <div class="column" id="column2">
-          <!-- Produkter vil blive indsat dynamisk her ved hjælp af JavaScript -->
+
+        <div class="column">
+          <h3>INFORMATION</h3>
+          <ul class="submenu">
+            <li class="submenu-item">FRAGT OG LEVERING</li>
+            <li class="submenu-item">HANDELSBETINGELSER</li>
+            <li class="submenu-item">HJÆLP & FAQ</li>
+            <li class="submenu-item">AFMELD</li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h3>OM OS</h3>
+          <ul class="submenu">
+            <li class="submenu-item">KONTAKT OS</li>
+            <li class="submenu-item">OM OS</li>
+            <li class="submenu-item">TERMS OF SERVICE</li>
+            <li class="submenu-item">REFUND POLICY</li>
+          </ul>
         </div>
       </div>
 
-      <div class="product-container" id="productContainer">
-        <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
-        <div class="productt">
+      <div class="divider"></div>
 
-            <img src="../img/trak1.jpg" alt="WHITE LRACTIVE">
-            <div class="product-info">
-              <p class="product-name">WHITE LRACTIVE</p>
-              <p class="product-price">Pris: 679 DKK</p>
-            </div>
-
+      <div class="footer-list">
+        <ul>
+          <li>COOKIE PREFERENCES</li>
+          <li>SITEMAP</li>
+          <li>PERSONDATA</li>
+          <li>POLITIKVILKÅR</li>
+          <li>FOR BRUG</li>
+        </ul>
+        <div class="icons">
+          <ul>
+            <li>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-tiktok"></i>
+            </li>
+          </ul>
         </div>
-
-        <div class="productt">
-
-            <img src="../img/jakke1.jpg" alt="LR WINTER JACKET 2">
-            <div class="product-info">
-              <p class="product-name">LR WINTER JACKET 2</p>
-              <p class="product-price">Pris: 1800 DKK</p>
-            </div>
-
-        </div>
-
-        <div class="productt">
-
-            <img src="../img/jakke2.jpg" alt="LR WINTER JACKET 2">
-            <div class="product-info">
-              <p class="product-name">LR WINTER JACKET 2</p>
-              <p class="product-price">Pris: 1800 DKK</p>
-            </div>
-
-        </div>
-
-        <div class="productt">
-
-            <img src="../img/jakke3.jpg" alt="LR WINTER JACKET 2">
-            <div class="product-info">
-              <p class="product-name">LR WINTER JACKET 2</p>
-              <p class="product-price">Pris: 1800 DKK</p>
-            </div>
-
-        </div>
-
-        <div class="productt">
-
-            <img src="../img/trak2.jpg" alt="WHITE LRACTIVE">
-            <div class="product-info">
-              <p class="product-name">WHITE LRACTIVE</p>
-              <p class="product-price">Pris: 679 DKK</p>
-            </div>
-
-        </div>
-
-        <div class="productt">
-            <img src="../img/jakke4.jpg" alt="LR WINTER JACKET 2">
-            <div class="product-info">
-              <p class="product-name">LR WINTER JACKET 2</p>
-              <p class="product-price">Pris: 1800 DKK</p>
-            </div>
-
-        </div>
-
       </div>
+
+      <div class="footer-images">
+        <img src="../img/pay.png" alt="alt du kan betale med på Larue Fashion">
+      </div>
+
+      <div class="footer-text">
+        <p>©2023 LARUE DREVET AF SHOPIFY</p>
+      </div>
+    </footer>
+  </div>
 </template>
+
 <script>
-function updateProducts() {
-  const productContainer = document.getElementById("productContainer");
-  productContainer.innerHTML = "";
+export default {
+  data() {
+    return {
+      products: [
+        { name: "WHITE LRACTIVE", price: 679, image: "../img/trak1.jpg" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke1.jpg" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke2.jpg"},
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke3.jpg" },
+        { name: "WHITE LRACTIVE", price: 679, image: "../img/trak2.jpg" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke4.jpg" }
+      ]
+    };
+  },
+  methods: {
+    applyFilters() {
+      const resultCount = document.getElementById("resultCount");
+      resultCount.innerText = `${this.products.length} result(s)`;
+    },
+    resetFilters() {
+      const resultCount = document.getElementById("resultCount");
+      resultCount.innerText = "0 result(s)";
+    },
+    updateProducts() {
+      const productContainer = document.getElementById("productContainer");
+      productContainer.innerHTML = "";
 
-  products.forEach(product => {
-    const productElement = document.createElement("div");
-    productElement.classList.add("product");
+      this.products.forEach(product => {
+        // Create an anchor element
+        const productLink = document.createElement("a");
+        productLink.href = product.link;
 
-    const imageElement = document.createElement("img");
-    imageElement.src = product.image;
-    imageElement.alt = product.name;
+        // Create a div for the product
+        const productElement = document.createElement("div");
+        productElement.classList.add("productt");
 
-    const infoElement = document.createElement("div");
-    infoElement.classList.add("product-info");
-    infoElement.innerHTML = `
-      <p class="product-name">${product.name}</p>
-      <p class="product-price">Pris: ${product.price} DKK</p>
-    `;
+        // Create an image element
+        const imageElement = document.createElement("img");
+        imageElement.src = product.image;
+        imageElement.alt = product.name;
 
-    productElement.appendChild(imageElement);
-    productElement.appendChild(infoElement);
+        // Create a div for product information
+        const infoElement = document.createElement("div");
+        infoElement.classList.add("product-info");
+        infoElement.innerHTML = `
+          <p class="product-name">${product.name}</p>
+          <p class="product-price">Pris: ${product.price} DKK</p>
+        `;
 
-    productContainer.appendChild(productElement);
-  });
-}
-  function applyFilters() {
-    // Implementer logikken til filtrering baseret på valgte filtre
-    // Opdater resultCount med det nye antal resultater
-    const resultCount = document.getElementById("resultCount");
-    resultCount.innerText = `${products.length} result(s)`;
+        // Append the image and information to the product div
+        productElement.appendChild(imageElement);
+        productElement.appendChild(infoElement);
+
+        // Append the product div to the anchor element
+        productLink.appendChild(productElement);
+
+        // Append the anchor element to the product container
+        productContainer.appendChild(productLink);
+      });
+    }
+  },
+  mounted() {
+    this.updateProducts();
   }
-  
-  function resetFilters() {
-    // Implementer logikken til at nulstille filtre
-    // Opdater resultCount med det samlede antal resultater
-    const resultCount = document.getElementById("resultCount");
-    resultCount.innerText = " result(s)";
-  }
-  
-  // Opdater produkter ved indlæsning af siden
-  updateProducts();
-  
+};
 </script>
 
 <style>
-
 .winter-header {
-text-align: center;
-margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .winter-header h1 {
-font-size: 24px;
-margin-bottom: 8px;
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .winter-header .sub-title {
-font-size: 18px;
-margin-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .winter-header .description {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .container {
@@ -193,7 +222,7 @@ font-size: 16px;
 }
 
 .column {
-  width: 30%; 
+  width: 30%;
   padding: 10px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -201,20 +230,20 @@ font-size: 16px;
 
 .product-container {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around; 
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .productt {
-  width: 30%; 
+  width: 30%;
   box-sizing: border-box;
   margin-bottom: 20px;
-  border: 1px solid rgba(221, 221, 221, 0.5); 
+  border: 1px solid rgba(221, 221, 221, 0.5);
   padding: 10px;
 }
 
 .productt img {
-  width: 30%; 
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -229,7 +258,8 @@ table {
   margin-top: 20px;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -253,8 +283,6 @@ th {
   margin-top: 20px;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -269,5 +297,4 @@ th {
     margin-bottom: 10px;
   }
 }
-  
 </style>
