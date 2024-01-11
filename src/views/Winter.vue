@@ -46,12 +46,11 @@
     <div id="resultCount">0 result(s)</div>
 
     <div class="filters">
-      <!-- Add more filters if needed -->
+  
     </div>
 
     <div class="container">
       <div class="column" v-for="(product, index) in products" :key="index">
-        <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
         <div class="productt">
           <a :href="product.link">
             <img :src="product.image" :alt="product.name">
@@ -134,12 +133,12 @@ export default {
   data() {
     return {
       products: [
-        { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak1.jpg", link: "buymode.html" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke1.jpg", link: "buymode.html" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke2.jpg", link: "buymode.html" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke3.jpg", link: "buymode.html" },
-        { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak2.jpg", link: "buymode.html" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke4.jpg", link: "buymode.html" }
+        { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak1.jpg", },
+        { name: "LR WINTER JACKET 2", price: 1800, image: "../src/img/jakke1.jpg", },
+        { name: "LR WINTER JACKET 2", price: 1800, image: "../src/img/jakke2.jpg", },
+        { name: "LR WINTER JACKET 2", price: 1800, image: "../src/img/jakke3.jpg", },
+        { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak2.jpg", },
+        { name: "LR WINTER JACKET 2", price: 1800, image: "../src/img/jakke4.jpg", }
       ]
     };
   },

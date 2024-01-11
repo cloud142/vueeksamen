@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     login() {
-      // Simulering af login-logik (erstat dette med din faktiske logik)
+     
       const correctUsername = "bruger123";
       const correctPassword = "kode123";
 
