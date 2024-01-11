@@ -49,16 +49,18 @@
       <!-- Add more filters if needed -->
     </div>
 
-    <div class="product-container" id="productContainer">
-      <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
-      <div class="productt" v-for="product in products" :key="product.name">
-        <a :href="product.link">
-          <img :src="product.image" :alt="product.name">
-          <div class="product-info">
-            <p class="product-name">{{ product.name }}</p>
-            <p class="product-price">Pris: {{ product.price }} DKK</p>
-          </div>
-        </a>
+    <div class="container">
+      <div class="column" v-for="(product, index) in products" :key="index">
+        <!-- Each product is wrapped in an anchor tag with the link to "buymode.html" -->
+        <div class="productt">
+          <a :href="product.link">
+            <img :src="product.image" :alt="product.name">
+            <div class="product-info">
+              <p class="product-name">{{ product.name }}</p>
+              <p class="product-price">Pris: {{ product.price }} DKK</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -132,12 +134,12 @@ export default {
   data() {
     return {
       products: [
-        { name: "WHITE LRACTIVE", price: 679, image: "../img/trak1.jpg" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke1.jpg" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke2.jpg"},
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke3.jpg" },
-        { name: "WHITE LRACTIVE", price: 679, image: "../img/trak2.jpg" },
-        { name: "LR WINTER JACKET 2", price: 1.800, image: "../img/jakke4.jpg" }
+        { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak1.jpg", link: "buymode.html" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke1.jpg", link: "buymode.html" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke2.jpg", link: "buymode.html" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke3.jpg", link: "buymode.html" },
+        { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak2.jpg", link: "buymode.html" },
+        { name: "LR WINTER JACKET 2", price: 1.800, image: "../src/img/jakke4.jpg", link: "buymode.html" }
       ]
     };
   },
@@ -222,9 +224,7 @@ export default {
 }
 
 .column {
-  width: 30%;
-  padding: 10px;
-  margin-bottom: 20px;
+  width: 48%;
   box-sizing: border-box;
 }
 
@@ -235,7 +235,7 @@ export default {
 }
 
 .productt {
-  width: 30%;
+  width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
   border: 1px solid rgba(221, 221, 221, 0.5);
@@ -290,6 +290,7 @@ th {
 
   .column {
     width: 100%;
+    margin-bottom: 50px;
   }
 
   .filter-group {
@@ -298,3 +299,4 @@ th {
   }
 }
 </style>
+
