@@ -156,20 +156,16 @@ export default {
       productContainer.innerHTML = "";
 
       this.products.forEach(product => {
-        // Create an anchor element
         const productLink = document.createElement("a");
         productLink.href = product.link;
 
-        // Create a div for the product
         const productElement = document.createElement("div");
         productElement.classList.add("productt");
 
-        // Create an image element
         const imageElement = document.createElement("img");
         imageElement.src = product.image;
         imageElement.alt = product.name;
 
-        // Create a div for product information
         const infoElement = document.createElement("div");
         infoElement.classList.add("product-info");
         infoElement.innerHTML = `
@@ -177,14 +173,11 @@ export default {
           <p class="product-price">Pris: ${product.price} DKK</p>
         `;
 
-        // Append the image and information to the product div
         productElement.appendChild(imageElement);
         productElement.appendChild(infoElement);
 
-        // Append the product div to the anchor element
         productLink.appendChild(productElement);
 
-        // Append the anchor element to the product container
         productContainer.appendChild(productLink);
       });
     }
