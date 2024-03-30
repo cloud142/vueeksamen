@@ -133,6 +133,7 @@ export default {
   data() {
     return {
       products: [
+        //array med objecter der present forskellige produkt, hvor være har price, name og image//
         { name: "WHITE LRACTIVE", price: 679, image: "../src/img/trak1.jpg", },
         { name: "LR WINTER JACKET 2", price: 1800, image: "../src/img/jakke1.jpg", },
         { name: "LR WINTER JACKET 2", price: 1800, image: "../src/img/jakke2.jpg", },

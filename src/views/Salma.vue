@@ -43,7 +43,7 @@ export default {
       this.username = "";
       this.password = "";
       this.loggedIn = false;
-      this.$router.push({ name: 'Login' });
+      this.$router.push({ name: 'Login' }); 
     }
   }
 };
